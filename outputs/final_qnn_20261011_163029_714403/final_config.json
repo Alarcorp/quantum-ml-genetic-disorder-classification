@@ -1,0 +1,168 @@
+{
+  "qubits": [
+    2,
+    4,
+    6
+  ],
+  "circuit_layers": 2,
+  "hidden_width": 32,
+  "batch_size": 64,
+  "max_epochs": 25,
+  "patience": 5,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "aux_loss_weight": 0.3,
+  "consistency_loss_weight": 0.1,
+  "seed": 42,
+  "selected_qubits": 6,
+  "final_epochs": 24,
+  "final_seed": 42,
+  "main_target": "Disorder Subclass",
+  "aux_target": "Genetic Disorder",
+  "main_classes": [
+    "Alzheimer's",
+    "Cancer",
+    "Cystic fibrosis",
+    "Diabetes",
+    "Hemochromatosis",
+    "Leber's hereditary optic neuropathy",
+    "Leigh syndrome",
+    "Mitochondrial myopathy",
+    "Tay-Sachs"
+  ],
+  "aux_classes": [
+    "Mitochondrial genetic inheritance disorders",
+    "Multifactorial genetic inheritance disorders",
+    "Single-gene inheritance diseases"
+  ],
+  "feature_columns": [
+    "Patient Age",
+    "Genes in mother's side",
+    "Inherited from father",
+    "Maternal gene",
+    "Paternal gene",
+    "Blood cell count (mcL)",
+    "Mother's age",
+    "Father's age",
+    "Respiratory Rate (breaths/min)",
+    "Heart Rate (rates/min",
+    "Gender",
+    "Birth asphyxia",
+    "Place of birth",
+    "Folic acid details (peri-conceptional)",
+    "H/O serious maternal illness",
+    "H/O radiation exposure (x-ray)",
+    "H/O substance abuse",
+    "Assisted conception IVF/ART",
+    "History of anomalies in previous pregnancies",
+    "No. of previous abortion",
+    "Birth defects",
+    "White Blood cell count (thousand per microliter)",
+    "Blood test result",
+    "Symptom 1",
+    "Symptom 2",
+    "Symptom 3",
+    "Symptom 4",
+    "Symptom 5"
+  ],
+  "numeric_columns": [
+    "Patient Age",
+    "Blood cell count (mcL)",
+    "Mother's age",
+    "Father's age",
+    "No. of previous abortion",
+    "White Blood cell count (thousand per microliter)"
+  ],
+  "categorical_columns": [
+    "Genes in mother's side",
+    "Inherited from father",
+    "Maternal gene",
+    "Paternal gene",
+    "Respiratory Rate (breaths/min)",
+    "Heart Rate (rates/min",
+    "Gender",
+    "Birth asphyxia",
+    "Place of birth",
+    "Folic acid details (peri-conceptional)",
+    "H/O serious maternal illness",
+    "H/O radiation exposure (x-ray)",
+    "H/O substance abuse",
+    "Assisted conception IVF/ART",
+    "History of anomalies in previous pregnancies",
+    "Birth defects",
+    "Blood test result",
+    "Symptom 1",
+    "Symptom 2",
+    "Symptom 3",
+    "Symptom 4",
+    "Symptom 5"
+  ],
+  "hierarchy_matrix": [
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "selection_metric": "mean internal-validation main F1 macro",
+  "epoch_rule": "ceiling of median selected-candidate best epoch",
+  "device": "cpu",
+  "pca_components": 45,
+  "input_dim": 45,
+  "main_class_weights": [
+    14.510018348693848,
+    22.69515609741211,
+    0.6418499946594238,
+    1.2174843549728394,
+    1.6330463886260986,
+    3.417417526245117,
+    0.42883288860321045,
+    0.5023332238197327,
+    0.78121018409729
+  ],
+  "aux_class_weights": [
+    0.6517871618270874,
+    3.205611228942871,
+    0.8666985034942627
+  ]
+}
